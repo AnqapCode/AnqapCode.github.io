@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Mahasiswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+      #edit {
+        display: none;
+      }
+      body {
+        font-family: "Quicksand", sans-serif;
+        height: 5000px;
+      }
+    </style>
+  </head>
+  <body class="bg-dark-subtle text-secondary-emphasis">
+    <div class="container mt-5">
+      <div class="text-center">
+        <h1 class="display-5 mb-5 fw-bold">Input Data Mahasiswa</h1>
+      </div>
+      <div class="main row justify-content-center">
+        <form action="" id="form-mahasiswa" class="row justify-content-center mb-4" autocomplete="off">
+          <div class="col-10 mb-3">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" required />
+          </div>
+          <div class="col-10 mb-3">
+            <label for="npm">NPM</label>
+            <input type="text" class="form-control" id="npm" placeholder="Masukkan NPM" required />
+          </div>
+          <div class="col-10 mb-3">
+            <label for="kelas">Kelas</label>
+            <input type="text" class="form-control" id="kelas" placeholder="Masukkan kelas" required />
+          </div>
+          <div class="col-10 mb-3">
+            <label for="jurusan">Jurusan</label>
+            <input type="text" class="form-control" id="jurusan" placeholder="Masukkan jurusan" required />
+          </div>
+          <div class="col-10">
+            <input type="submit" class="btn btn-success add-btn w-100" value="Kirim!" id="kirim" />
+            <input type="submit" class="btn btn-primary add-btn w-100" value="Update!" id="edit" />
+          </div>
+        </form>
+        <div class="col-10 mt-5 table-responsive bg-dark rounded">
+          <table class="table table-striped table-dark table-hover table-bordered mt-3">
+            <thead>
+              <tr class="text-center">
+                <th>#</th>
+                <th>Nama Lengkap</th>
+                <th>NPM</th>
+                <th>Kelas</th>
+                <th>Jurusan</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="list-mahasiswa"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
